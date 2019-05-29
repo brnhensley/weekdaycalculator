@@ -9,9 +9,8 @@ $(document).ready(function() {
     event.preventDefault();
     let date = $("input#date").val().toString();
     let datesolver = new DateSolver(date);
-    let result = datesolver.GetDay(date);
+    let result = datesolver.GetDay();
     $(".date").text(result);
-
     $("#result").show();
   });
 });

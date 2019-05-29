@@ -1,39 +1,40 @@
 export class DateSolver {
   constructor(date) {
-    this.date = date;
+    this.date = new Date(date);
   }
 
-  GetDay(input)
+  GetDay()
   {
-    let date = new Date(input);
+    // let date = new Date(this.date);
     let answer = "";
-    let day = date.getDay();
-
-    if(day % 7 === 6)
+    let day = this.date.getUTCDay();
+    if(day === 0)
     {
       answer = "Sunday Fun Day";
+
     }
-    if(day % 7 === 0)
+    if(day === 1)
     {
       answer = "I hate Mondays :(";
     }
-    if(day % 7 === 1)
+    if(day === 2)
     {
       answer = "Taco Tuesday";
     }
-    if(day % 7 === 2)
+    if(day === 3)
     {
+      console.log(day + " FUUUUUUUCJKKCKCKKCKaJSFHOUHAQEOUFHKJEHGK");
       answer = "Wacky Wednesday";
     }
-    if(day % 7 === 3)
+    if(day === 4)
     {
       answer = "Thursty Thursday";
     }
-    if(day % 7 === 4)
+    if(day === 5)
     {
       answer = "Freaky Friday";
     }
-    if(day % 7 === 5)
+    if(day === 6)
     {
       answer = "Stoned Saturday";
     }
